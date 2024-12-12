@@ -2,11 +2,16 @@
 <html lang="uk">
   <head>
     <meta charset="UTF-8">
-   <link rel="stylesheet" href="styles.css">
-    <title> Моя перша вебсторінка </title>
+   <link rel="stylesheet" href="css/styles.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+      <title> Моя перша вебсторінка </title>
   </head>
   <body>
-    <div class="menu" id="menu">
+    <nav>
+    <section class="menu" id="menu">
+      <div class="about-text">
       <ul>
         <il>
           <a href="#about">Про мене</a>
@@ -24,17 +29,21 @@
           <a href="#contacts">Контакти</a>
         </il>
       </ul>
+    </nav>
     </div>
     <div class="main" id="main">
+      <header>
     <h1>Моя веб сторінка</h1>
+    </header>
     </div>
-    <div class="about" id="about">
+    <main>
+    <section class="about" id="about">
       <h2>Про мене</h2>
       <p>
        Мене звати Ярина Пелех. Народилася і проживаю у Льовові.
       </p>
-    </div>
-    <div class="education">
+    </section>
+    <div class="education" id="education">
       <h2>Освіта</h2>
       <p>
         " Я навчаюся на п'ятому курсу "
@@ -61,9 +70,9 @@
   </li>
 </ul>
 </div>
-<div class="hobby">
+<div class="hobby" id="hobby">
   <h3>Мої хоббі</h3>
-  <ul>
+  <ul class="icon-list">
     <li>
       Люблю читати книги
     </li>
@@ -76,7 +85,11 @@
   </ul>
 </div>
 <div class="works" id="works">
-  <h2>Мої роботи</h2>
+  <div class="container  align-middle">
+    <div class="row">
+        <div class="col-md-6  align-middle works-info">
+            <div class="p-4 m-3">
+                  <h2>Мої роботи</h2>
   <ul class="workss">
     <li>
     <a href="#weaving">Ткацтво</a>
@@ -98,11 +111,13 @@
 <img src="Images/photo_5319113239008765640_y.jpg" width="50%"/>
 <img src="Images/photo_5319113239008765643_y.jpg" width="48%"/>
 </div>
-<div class="contacts" id="contacts">
+<footer>
+</main>
+<footer id="contacts">
+  <div class="footer">
   <h2>Контакти</h2>
   <p>
     "Якщо ви хочете зв'язатися зі мною,будь ласка, скористайтесь одним з наступних способів:"
-  </p>
   </p>
   <ul>
     <li>
@@ -112,11 +127,30 @@
     <li>
       "Телефон: +380682174156"
     </li>
+    <div class="socials">
     <li>
       " Intagram: "
    <a href="https://www.instagram.com/iarinakubishin/" target="_blank">@iarinakubishin</a>
     </li>
   </ul>
 </div>
+    </footer>
+      <p>&copy; 2024 Pelech Yaruna</p>
+    </div>
+  </footer>
+
+  <script>
+    function closeLightbox(id) {
+      document.getElementById(id).style.display = 'none';
+      history.pushState("", document.title, window.location.pathname + window.location.search);
+    }
+
+    document.addEventListener('click', function (event) {
+      if (event.target.classList.contains('lightbox')) {
+        event.target.style.display = 'none';
+        history.pushState("", document.title, window.location.pathname + window.location.search);
+      }
+    });
+  </script>
 </body>
 </html>
