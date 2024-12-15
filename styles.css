@@ -13,15 +13,29 @@ html {
     scroll-behavior: smooth;
  }
 body{
-    font-family: "Roboto Condensed", sans-serif;
+  font-family: "Sofia Sans", sans-serif;
     font-size: 24px;
     background-color:snow;
-    color: #116d56;
+    color: #af1481;
   }
 * {
     color: rgb(243, 244, 245);
 }
-
+.menu {
+  position: fixed;
+  justify-content: space-around;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  display: flex;
+  height: 50px;
+  background-color: #5e91b3;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  padding: 15px;
+  
+}
 .menu {
     margin: 0;
     padding: 0;
@@ -34,14 +48,18 @@ body{
     width: 100%;
 }
 
+
 .menu :hover {
     color: rgb(74, 61, 133);
 }
+.menu {
+  display: flex;
+  align-items: center;
+} 
 
 .workss :hover {
     color: rgb(26, 56, 155);
 }
-
 .workss {
     list-style: square;
 }
@@ -49,15 +67,27 @@ body{
 #weaving {
     background-color: rgb(182, 27, 135);
     font-size: 30px;
+    padding: 10px;
+    border: 10px;
+    font-family: "Sofia Sans", sans-serif;
+    margin: 50px 0px;
 }
 #painting {
     background-color: rgb(73, 27, 182);
     font-size: 30px;
+    padding: 10px;
+    border: 10px;
+    font-family: "Sofia Sans", sans-serif;
+    margin: 50px 0px;
 }
 
 #drawing {
     background-color: rgb(33, 7, 146);
     font-size: 30px;
+    padding: 10px;
+    border: 10px;
+    font-family: "Sofia Sans", sans-serif;
+    margin: 50px 0px;
 }
 *{
     margin: 0px;
@@ -65,22 +95,51 @@ body{
   
   }
   
-  html {
-     scroll-behavior: smooth;
-  }
-  
-  body{
-    font-family: "Roboto Condensed", sans-serif;
-    font-size: 24px;
-    background-color:snow;
-    color: #1949b1;
-  }
-  
   main{
     width: 1200px;
       margin: 0px auto 0px auto;
   }
-  
+  nav {
+    background-color: rgba(44, 62, 80, 0.95);
+    padding: 20px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    padding: 10px 20px;
+}
+
+nav ul li a:hover {
+    background-color: white;
+    color: #2c3e50;
+    border-radius: 5px;
+}
+  nav{
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: space-around;
+    height: 80px;
+    background-color: #4b134d;
+    color: snow;
+    z-index: 1;
+  }
   nav{
     position: fixed;
     width: 100%;
@@ -101,7 +160,7 @@ body{
   }
   
   nav a:hover{
-    color: #157a48;
+    color: #7a1569;
     transition: color 0.3s;
   }
   
@@ -121,7 +180,7 @@ body{
       height: 200px;
      
   }
-
+    
   h1{
     text-align: center;
     color: snow;
@@ -136,7 +195,7 @@ body{
   }
   
   .about a:hover{
-    color: #0f2d91;
+    color: #a31539;
     transition: color 0.3s;
   }
   
@@ -144,7 +203,7 @@ body{
     display:flex;
     justify-content: space-around;
     margin: 28px 0px;
-    background-color: #8a1764;
+    background-color: #460624;
     color: snow;
     padding: 28px;
     border-radius: 20px;
@@ -169,7 +228,7 @@ body{
   .education{
     padding: 28px;
     border-radius: 20px;
-    border: 3px dashed #9b1172;
+    border: 3px dashed #134d30;
     text-align: center;
     margin: 28px 0px;
   }
@@ -185,6 +244,38 @@ body{
   .hobby {
     padding: 28px;
     border-radius: 20px;
+    background-color:  #134d30;
+    color: snow;
+    text-align: center;
+    margin: 28px 0px;
+  }
+.left-content {
+    font-size: 25px;
+    padding: 10px;
+    border: 10px;
+    margin-bottom: 100px;
+    margin-top: 100px;
+  }
+  .education{
+    padding: 28px;
+    border-radius: 20px;
+    border: 3px dashed #9b1172;
+    text-align: center;
+    margin: 28px 0px;
+  }
+  
+  h2{
+    padding-bottom: 10px;
+  }
+  
+  .education p{
+    text-align: justify;
+   
+  }
+
+  .hobby {
+    padding: 28px;
+    border-radius: 20px;
     background-color:  #4d1345;
     color: rgb(153, 77, 77);
     text-align: center;
@@ -195,24 +286,6 @@ body{
     text-align: justify;
     padding: 14px;
   }
-  
-  .icon-list {
-    list-style: none;
-    padding-left: 0;
-  }
-  
-  .icon-list li {
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .icon-list i {
-    margin-right: 10px;
-    color: snow;
-    /* Колір іконки */
-  }
-  
   .work{
     padding: 14px;
       border-radius: 20px;
@@ -220,63 +293,6 @@ body{
       text-align: center;
       margin: 28px 0px;
   }
-  
-  .images{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  .images img{
-    opacity: 0.7;
-    height: 400px;
-    margin: 15px;
-  }
-  
-  .images img:hover{
-    opacity: 1;
-    transition: 1s;
-  }
-  
-  .lightbox {
-    display: none;
-    position: fixed;
-    z-index: 10;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-  }
-  
-  .lightbox img {
-    display: block;
-    max-width: 80%;
-    max-height: 80%;
-    margin: auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  .lightbox:target {
-    display: block;
-  }
-  
-  .close {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    font-size: 40px;
-    color: white;
-    text-decoration: none;
-  }
-  
-  .close:hover {
-    color: #181268;
-  }
-  
   .footer {
     margin-top: 20px;
     background-color: #811b4e;
@@ -284,29 +300,6 @@ body{
     text-align: center;
     padding: 20px 0;
   }
+
   
-  .footer a {
-    color: snow;
-    text-decoration: none;
-    margin: 0 10px;
-    transition: color 0.3s;
-  }
-  
-  .footer a:hover {
-    color: #aa9393;
-  }
-  
-  .footer p {
-    margin: 5px 0;
-  }
-  
-  .footer .socials a {
-    display: inline-block;
-    margin: 0 10px;
-  }
-  
-  .footer .socials img {
-    width: 32px;
-    height: 32px;
-  }
   
